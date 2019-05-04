@@ -1,5 +1,6 @@
 ﻿* {
     -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -16,12 +17,15 @@ a {
     text-decoration: none;
     color: #058035;
     -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
     -o-transition-duration: 0.2s;
     transition-duration: 0.2s;
     -webkit-transition-property: text-shadow;
+    -moz-transition-property: text-shadow;
     -o-transition-property: text-shadow;
     transition-property: text-shadow;
     -webkit-transition-timing-function: ease-out;
+    -moz-transition-timing-function: ease-out;
     -o-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
@@ -92,11 +96,14 @@ input, label {
         text-decoration: none;
         padding: 10px;
         border-radius: 3px;
+        border-bottom: 2px solid #333;
         border-bottom: 2px solid rgba(0,0,0,0.3);
         -webkit-transition-duration: 0.8s;
+        -moz-transition-duration: 0.8s;
         -o-transition-duration: 0.8s;
         transition-duration: 0.8s;
         -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
         -o-transition-property: opacity;
         transition-property: opacity;
     }
@@ -109,11 +116,14 @@ button {
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
+    border-bottom: 2px solid #333;
     border-bottom: 2px solid rgba(0,0,0,0.3);
     -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
     -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
     -o-transition-property: opacity;
     transition-property: opacity;
 }
@@ -126,11 +136,14 @@ button {
     text-decoration: none;
     padding: 10px;
     border-radius: 3px;
+    border-bottom: 2px solid #333;
     border-bottom: 2px solid rgba(0,0,0,0.3);
     -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
     -o-transition-duration: 0.8s;
     transition-duration: 0.8s;
     -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
     -o-transition-property: opacity;
     transition-property: opacity;
 }
@@ -168,9 +181,12 @@ button {
     background-image: -webkit-linear-gradient(bottom, #0a090c 0%, #595a4a 100%);
     background-image: -o-linear-gradient(bottom, #0a090c 0%, #595a4a 100%);
     background-image: linear-gradient(to top, #0a090c 0%, #595a4a 100%);
+    background-image: -moz-linear-gradient(to top, #0a090c 0%, #595a4a 100%);
     border-radius: 5px;
     width: auto;
+    border-left: 2px dotted #333;
     border-left: 2px dotted rgba(0,0,0,0.3);
+    border-right: 2px dotted #333;
     border-right: 2px dotted rgba(0,0,0,0.3);
     letter-spacing: 0.1em;
     line-height: 1.7em;
@@ -207,18 +223,24 @@ button {
     width: 100%;
     padding: 20px;
     -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
 }
 
 .page-header__item {
     -webkit-box-flex: 0;
+    -ms-box-flex: 0;
+    -moz-box-flex: 0;
     -ms-flex: 0 1 200px;
     flex: 0 1 200px;
 }
 
     .page-header__item:last-child {
         -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        -ms-box-flex: 1;
         -ms-flex-positive: 1;
         flex-grow: 1;
         text-align: right;
@@ -231,7 +253,11 @@ button {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -ms-box-orient: vertical;
     -webkit-box-direction: normal;
+    -ms-box-direction: normal;
+    -moz-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
     text-align: center;
@@ -266,6 +292,7 @@ td {
 
 #mainLogo {
     -webkit-box-shadow: 0 0 20px #fffff9;
+    -moz-box-shadow: 0 0 20px #fffff9;
     box-shadow: 0 0 20px #fffff9;
 }
 
@@ -347,6 +374,7 @@ td {
 
 .sun {
     -webkit-animation: 0.7s color-change infinite alternate linear, 60s fly infinite normal linear;
+    -moz-animation: 0.7s color-change infinite alternate linear, 60s fly infinite normal linear;
     animation: 0.7s color-change infinite alternate linear, 60s fly infinite normal linear;
 }
 
