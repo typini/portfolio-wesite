@@ -8,8 +8,9 @@
     --panel-color-dark: #0a090c;
     --panel-color-dark-contrast: #595a4a;
     --panel-dark-text-color: #fcfdee;
+    --panel-dark-link-color: #53BBf5;
     --mid-gray-color: #363635;
-    --link-normal-color: #058035;
+    --link-normal-color: #03451D;
     --link-hover-color: #329759;
     --link-active-color: #86877b;
     --link-highlighted-color-alternate: #ddeedd;
@@ -18,7 +19,6 @@
     --brighter: rgba(0,0,0,0.3);
     --sun-bright-color: #ffd96b;
     --sun-dark-color: #ffcb8e;
-    
     --font-h1: 1.6em;
     --line-height-default: 1.2;
     --font-size-default: 1.05em;
@@ -130,8 +130,8 @@ input[type="submit"]:hover, input[type="submit"]:focus, button:hover, button:foc
     width: auto;
     border-left: 2px dotted var(--brighter);
     border-right: 2px dotted var(--brighter);
-    letter-spacing: 0.1em;
-    line-height: 1.7em;
+    letter-spacing: -0.025em;
+    line-height: 1.6em;
 }
 
 .svg__span--hidden{
@@ -176,25 +176,43 @@ input[type="submit"]:hover, input[type="submit"]:focus, button:hover, button:foc
 
 .page-footer{
     padding-top: 40px;
+    padding-bottom: 80px;
     clear: both;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
+.panel__title > a {
+    color: var(--panel-dark-link-color);
+}
+
 .profile {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.5em;
+    display: flex;
+    align-items: flex-start;
 }
 
 .profile__portait {
-    float: left;
+    /*float: left;*/
+    margin: 40px;
     width: 250px;
-    margin-right: 40px;
     height: auto;
     border: 4px solid var(--text-color);
     border-radius: 50%;
+}
+
+.profile__text {
+    padding-right: 40px;
+}
+
+.pane {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.5em;
+    padding: 3px 60px;
 }
 
 th {
@@ -246,21 +264,21 @@ td {
     animation: 0.7s color-change infinite alternate linear, 60s fly infinite normal linear;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
     }
 }
 
-@media all and (min-width: 500px) and (max-width:750px){
+@media all and (min-width: 600px) and (max-width: 900px){
     .grid {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media all and (max-width: 750px){
+@media all and (max-width: 900px){
     .grid {
-        grid-gap: 10px;
+        grid-gap: 15px;
     }
     .grid__item:last-child {
         grid-column: auto / auto;
