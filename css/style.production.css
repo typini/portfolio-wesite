@@ -1,5 +1,7 @@
 ﻿:root {
     --background-color: #fffff9;
+    --background-color-g1: #fdcf8e;
+    --background-color-g2: #fffed5;
     --text-color: #333;
     --text-feature-color: #7a7a7a;
     --panel-color: #fff6b7;
@@ -37,6 +39,13 @@ body {
     font-size: var(--font-size-default);
     line-height: var(--line-height-default);
     color: var(--text-color);
+    background: -webkit-gradient(linear, right top, left top, from(var(--background-color)), color-stop(var(--background-color-g1)), to(var(--background-color-g2)));
+    background: -webkit-linear-gradient(right, var(--background-color), var(--background-color-g1), var(--background-color-g2));
+    background: -o-linear-gradient(right, var(--background-color), var(--background-color-g1), var(--background-color-g2));
+    background: linear-gradient(270deg, var(--background-color), var(--background-color-g1), var(--background-color-g2));
+    background-size: 400% 400%;
+    -webkit-animation: background-fades 30s ease infinite;
+    animation: background-fades 30s ease infinite;
 }
 
 a {
@@ -261,8 +270,38 @@ td {
 }
 
 #mainLogo {
-    -webkit-box-shadow: 0 0 20px var(--background-color);
-    box-shadow: 0 0 20px var(--background-color);
+    border: 6px solid white;
+    border-radius: 40px;
+    -webkit-box-shadow: 0 0 20px var(--background-color), 0 0 10px var(--background-color), 0 0 5px var(--background-color);
+    box-shadow: 0 0 20px var(--background-color), 0 0 10px var(--background-color), 0 0 5px var(--background-color);
+}
+
+@-webkit-keyframes background-fades {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes background-fades {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @-webkit-keyframes color-change {
